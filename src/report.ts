@@ -29,6 +29,8 @@ export async function handleReport(req: Request, env: Env): Promise<Response> {
   if (text.length < 4) return new Response("too short", { status: 400 });
   const ip = req.headers.get("cf-connecting-ip") || "unknown";
   if (await overLimit(ip)) return new Response("too many", { status: 429 });
-  await notifyError(env, `${env.SITE_NAME}：有人回報內容錯誤`, `頁面：${page}\n${text}`);
+  const sent = await notifyError(env, `${env.SITE_NAME}：有人回報內容錯誤`, `頁面：${page}\n${text}`);
+  // 通知沒送到就不能回「已收到」，否則使用者以為有人看到了
+  if (!sent) return new Response("notify failed", { status: 502 });
   return Response.json({ ok: true });
 }
