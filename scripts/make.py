@@ -17,6 +17,7 @@ STEPS = [
 ]
 if "--no-smoke" not in sys.argv:
     STEPS.append(("冒煙測試（真瀏覽器）", ["scripts/smoke.py"]))
+    STEPS.append(("無障礙 axe（淺色與深色）", ["scripts/a11y.py"]))
 
 for name, args in STEPS:
     print(f"\n== {name}")

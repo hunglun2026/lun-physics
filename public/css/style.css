@@ -6,7 +6,7 @@
 /* FONTS:END */
 :root{
   --bg:#f6f8fb;--card:#fff;--ink:#16202e;--ink2:#52607a;--line:#d7deea;
-  --brand:#16325c;--brand2:#2a5db0;--brand-l:#e6eefb;--amber:#c77d00;--amber-l:#fff3d6;
+  --brand:#16325c;--brand2:#2a5db0;--brand-l:#e6eefb;--amber:#8a5200;--amber-l:#fff3d6;
   --ok:#17784a;--ok-l:#dff3e8;--bad:#b3261e;--bad-l:#fde7e5;--radius:14px;
   --shadow:0 1px 2px rgba(22,50,92,.08),0 6px 20px rgba(22,50,92,.06);
 }

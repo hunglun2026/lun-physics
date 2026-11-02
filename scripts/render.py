@@ -134,7 +134,7 @@ def body_to_html(body: str, sim_title=lambda n: n) -> str:
                 buf.append(lines[i].lstrip(">!").strip()); i += 1
             cls = "warn" if warn else "tip"
             label = "常見錯誤" if warn else "重點"
-            out.append(f'<aside class="{cls}"><b>{label}</b><p>' + inline(" ".join(buf)) + "</p></aside>")
+            out.append(f'<div class="{cls}" role="note"><b>{label}</b><p>' + inline(" ".join(buf)) + "</p></div>")
             continue
         para.append(ln.strip()); i += 1
     flush_para()
