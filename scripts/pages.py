@@ -97,7 +97,7 @@ def chapter_page(ch, unit_name: str, body_html: str, probs_html: str, prev, nxt,
 
 def problem_html(i: int, p, q_html: str, steps_html: str) -> str:
     hint = f'<details class="hint"><summary>提示</summary><p>{p.hint}</p></details>' if p.hint else ""
-    return f"""<div class="prob" data-i="{i}" data-ans="{p.ans!r}" data-tol="{p.tol}">
+    return f"""<div class="prob" data-i="{i}" data-ans="{p.ans:.10g}" data-tol="{p.tol}">
 <p class="pq"><span class="qn">{i + 1}</span><span class="qt">{q_html}</span></p>
 <div class="row"><label class="sr" for="a{i}">第 {i + 1} 題答案</label>
 <input id="a{i}" class="ans" inputmode="decimal" autocomplete="off" placeholder="答案數值"><span class="uu">{esc(p.unit)}</span>
