@@ -1,0 +1,11 @@
+# 普通物理（大學程度的免費自學站）：手工建的內容站，不是 oe／swe 套模板產生的。欄位格式沿用探險家系列，讓 first-publish.sh、publish-public.sh、sd 都讀得懂。
+名稱: 普通物理
+代號: physics
+預設: physics
+網址: https://physics.hunglun.com
+# 發布（scripts/publish-public.sh、supereduweb/templates/first-publish.sh 讀這幾行）：GitHub＋Cloudflare 同一組帳號 hunglun2026
+發布repo: hunglun2026/lun-physics
+憑證名稱: hunglun2026            # steve0802\cf-tokens.txt 與 gh-tokens.txt 的鍵（gh 用「<名稱>-workflow」那把，能推 .github）
+Cloudflare帳號編號: d286dc43743f9a5e5dea99efea359ee5
+Worker名稱: physics-explorer
+網域: physics.hunglun.com

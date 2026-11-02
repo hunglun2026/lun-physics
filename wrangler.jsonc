@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "physics-explorer",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-01-01",
+  "observability": { "enabled": true },
+  // 網頁都是 public/ 的靜態檔（scripts/build.py 產生）；只有 /report 先進程式，其餘交給 ASSETS。沒有資料庫。
+  "assets": { "directory": "./public", "binding": "ASSETS", "run_worker_first": ["/report"], "html_handling": "auto-trailing-slash" },
+  // 網址一律用 physics.hunglun.com（不要 dev 網址）。自訂網域用帳號層級 API 綁一次，不寫 routes
+  "workers_dev": false,
+  "preview_urls": false,
+  "vars": { "APP_VERSION": "0.1.0", "SITE_NAME": "普通物理", "SITE_URL": "https://physics.hunglun.com" }
+  // secrets（cf secret bulk，不要用管線）：NTFY_TOPIC
+}
