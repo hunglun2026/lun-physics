@@ -8,17 +8,21 @@ export async function notifyError(env: Env, title: string, body: string): Promis
     console.log("ntfy: NTFY_TOPIC 沒設定");
     return false;
   }
-  try {
-    const r = await fetch(`https://ntfy.sh/${env.NTFY_TOPIC}`, {
-      method: "POST",
-      // header 只能放 ASCII，中文標題用 RFC 2047 編碼
-      headers: { Title: `=?UTF-8?B?${btoa(String.fromCharCode(...new TextEncoder().encode(title)))}?=`, Priority: "high", Tags: "warning" },
-      body: body.slice(0, 1000),
-    });
-    if (!r.ok) console.log("ntfy: HTTP", r.status, (await r.text()).slice(0, 200));
-    return r.ok;
-  } catch (e) {
-    console.log("ntfy: 例外", String(e));
-    return false;
+  // 最多試 2 次：ntfy 偶爾對 Cloudflare 共用出口限流或回 5xx，第二次通常就過了
+  for (let i = 0; i < 2; i++) {
+    try {
+      const r = await fetch(`https://ntfy.sh/${env.NTFY_TOPIC}`, {
+        method: "POST",
+        // header 只能放 ASCII，中文標題用 RFC 2047 編碼
+        headers: { Title: `=?UTF-8?B?${btoa(String.fromCharCode(...new TextEncoder().encode(title)))}?=`, Priority: "high", Tags: "warning" },
+        body: body.slice(0, 1000),
+      });
+      if (r.ok) return true;
+      console.log("ntfy: HTTP", r.status, (await r.text()).slice(0, 200));
+    } catch (e) {
+      console.log("ntfy: 例外", String(e));
+    }
+    if (i === 0) await new Promise((res) => setTimeout(res, 800));
   }
+  return false;
 }
