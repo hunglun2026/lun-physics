@@ -1,6 +1,6 @@
 # 普通物理
 
-> 免費、免註冊的繁體中文大學普通物理自學站，45 章，每章有講解、互動模擬與附解答的練習題。
+> 免費、免註冊的繁體中文大學普通物理自學站，41 章，每章有講解、互動模擬與附解答的練習題。
 
 ## 力學
 - [單位與測量](https://physics.hunglun.com/c/units-measure): 物理量由「數字加單位」組成；學會換算、看量綱、抓有效位數，後面每一章的計算都靠這一章。
@@ -42,7 +42,6 @@
 - [電磁感應](https://physics.hunglun.com/c/induction): 磁通量改變就產生電動勢：發電機、變壓器、感應爐的原理，以及冷次定律決定方向。
 - [電感](https://physics.hunglun.com/c/inductance): 線圈反抗電流的變化；電感把能量儲存在磁場中，和電阻、電容組成 RL、LC 電路。
 - [交流電路](https://physics.hunglun.com/c/ac-circuits): 電阻、電感、電容在交流電下各有不同的行為；阻抗把三者合起來，共振是電路最重要的現象。
-- [馬克士威方程組與物質磁性](https://physics.hunglun.com/c/maxwell-magnetism): 四條方程式收納整個電磁學；其中一條補上「變化的電場也會產生磁場」，電磁波因此成立。物質放進磁場，則依原子的磁矩分成順磁、反磁與鐵磁。
 - [電磁波](https://physics.hunglun.com/c/em-waves): 變化的電場產生磁場、變化的磁場產生電場：馬克士威方程式預言了電磁波，光就是它的一種。
 
 ## 光學
@@ -54,7 +53,4 @@
 - [狹義相對論](https://physics.hunglun.com/c/relativity): 光速對所有觀察者都一樣，會讓時間變慢、長度變短，並且質量就是能量。
 - [光的粒子性](https://physics.hunglun.com/c/photons): 光電效應與黑體輻射說明光的能量是一份一份的；光子的能量只看頻率，不看亮度。
 - [物質波與原子結構](https://physics.hunglun.com/c/matter-waves-atom): 電子也有波動性；波長由動量決定，波的本質使位置與動量無法同時精確；氫原子的能階說明為什麼原子只發出特定顏色的光。
-- [波函數與薛丁格方程式](https://physics.hunglun.com/c/quantum-mechanics): 量子力學用波函數描述粒子；波函數的平方是找到粒子的機率。把粒子關進一個「盒子」，能量就只剩特定幾個值，粒子還能穿過古典上過不去的牆。
-- [固體與半導體](https://physics.hunglun.com/c/solids): 原子靠在一起，能階會展開成能帶；能隙的大小決定一種材料是導體、絕緣體還是半導體，也是整個電子工業的基礎。
 - [原子核與放射性](https://physics.hunglun.com/c/nuclear): 原子核由質子與中子組成，靠強力束縛；不穩定的核會放射衰變，半衰期告訴你它衰變得多快。
-- [粒子物理與宇宙學](https://physics.hunglun.com/c/particles-cosmology): 所有物質由少數幾種基本粒子組成，靠四種作用力互動；宇宙正在膨脹，往回推可以算出它的年齡，並追到大霹靂。

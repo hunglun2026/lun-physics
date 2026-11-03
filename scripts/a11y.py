@@ -20,7 +20,7 @@ def main() -> int:
         return 0
     axe = AXE.read_text(encoding="utf-8")
     ids = [c["id"] for c in json.loads((ROOT / "public/data/chapters.json").read_text(encoding="utf-8"))]
-    pages = ["/", "/home", "/about", "/help", "/privacy"] + [f"/c/{i}" for i in ids]
+    pages = ["/", "/about", "/help", "/privacy"] + [f"/c/{i}" for i in ids]
     srv, base = smoke.serve()
     bad: dict = {}
     with sync_playwright() as pw:

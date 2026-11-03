@@ -1,19 +1,18 @@
-/* 普通物理：淺色暖白底＋藍色主色，六個單元各有自己的顏色。字型 Noto Sans TC 自架子集，由 scripts/build-font.py 寫入下面的 FONTS 區塊。 */
+/* 普通物理：深藍（理性）＋琥珀（重點）。字型 Noto Sans TC 自架子集，由 scripts/build-font.py 寫入下面的 FONTS 區塊。 */
 /* FONTS:BEGIN 由 scripts/build-font.py 產生，不要手改 */
-@font-face{font-family:"PhysSans";src:url("/fonts/phys-sans-0-425b6fe1.woff2") format("woff2");font-weight:400 800;font-display:swap;unicode-range:U+20-7E,U+B0,U+B2,U+B7,U+BD,U+D7,U+394,U+3A6,U+3A9,U+3B2-3B3,U+3B5,U+3B8,U+3BB-3BC,U+3C0,U+3C4,U+3C6,U+3C8-3C9,U+2013,U+2026,U+3000-3002,U+300A-300D,U+4E00-4E01,U+4E09-4E0B,U+4E0D,U+4E14,U+4E2D,U+4E3B,U+4E4B,U+4E5F,U+4E86,U+4E8B-4E8C,U+4E92,U+4E94-4E95,U+4E9B,U+4EA4,U+4EAE,U+4EBA,U+4EC0,U+4ECD,U+4ED6,U+4ED8,U+4EE3,U+4EE5,U+4EF0,U+4EF6,U+4EFB,U+4F38,U+4F3A,U+4F3C,U+4F46,U+4F4D-4F4F,U+4F55,U+4F5C,U+4F60,U+4F7F,U+4F86,U+4F8B,U+4F96,U+4F9D,U+4FC2,U+4FDD,U+4FEE,U+500B,U+5011-5012,U+5019,U+503C,U+504F,U+505A,U+505C,U+5074,U+50B3,U+50CF,U+5141,U+5143,U+5145,U+5148-5149,U+514B,U+514D,U+5165,U+5167-5169,U+516C,U+5171,U+5176,U+5178,U+518A,U+518D,U+51F8,U+51FA,U+51FD,U+5206,U+521D,U+5224-5225,U+5230,U+5236,U+524D,U+5269,U+5275,U+529B,U+529F-52A0,U+52D5,U+52DE,U+52E2,U+52FE,U+5305,U+5316,U+532F,U+5341,U+5348,U+534A,U+5361,U+5373,U+537B,U+539F,U+53BB,U+53C3,U+53CD,U+53D6-53D7,U+53E4-53E6,U+53EA,U+53EF-53F0,U+53F3,U+5404,U+5408,U+540C-540D,U+5411,U+542B,U+5438,U+544A,U+5468,U+548C,U+54EA,U+554F,U+555F,U+55AE,U+55CE,U+5668,U+56B4,U+56DB,U+56DE,U+56E0,U+56FA,U+5708,U+570D,U+5713,U+5716,U+5728,U+5730,U+5740,U+5747,U+5751,U+5782,U+57FA,U+5831,U+5834,U+584A,U+586B,U+589E,U+58D3,U+58EB,U+5916,U+591A,U+591C,U+5920,U+5927,U+592A,U+592E,U+5931,U+5957,U+597D,U+5982,U+59CB,U+59D3,U+5A01,U+5B50,U+5B57-5B58,U+5B78,U+5B83,U+5B87-5B89,U+5B8C,U+5B99-5B9A,U+5BB6,U+5BB9,U+5BC6,U+5BE6,U+5BEB-5BEC,U+5C01,U+5C04,U+5C08,U+5C0B,U+5C0D-5C0F,U+5C11,U+5C16,U+5C31,U+5C3A,U+5C3E,U+5C4F,U+5C6C,U+5CF0,U+5D4C,U+5DE6,U+5DEE,U+5DF1-5DF2,U+5E03,U+5E2B,U+5E33,U+5E36,U+5E38,U+5E45,U+5E72-5E74,U+5E7E,U+5E8F,U+5E95,U+5EA6-5EA7,U+5EAB,U+5EE3,U+5EF6,U+5EFA,U+5F0F,U+5F15,U+5F26,U+5F37,U+5F48,U+5F62,U+5F71,U+5F80,U+5F88,U+5F8B-5F8C,U+5F91,U+5F97,U+5F9E,U+5FA9-5FAA,U+5FAE,U+5FC3,U+5FEB,U+5FF5,U+5FFD,U+600E,U+6027,U+6046,U+6062,U+606F,U+60F3,U+611F,U+614B,U+6162,U+61C2,U+61C9,U+6210-6211,U+6216,U+6240,U+624B,U+624D,U+6253,U+627E,U+6280,U+628A,U+6293,U+6296,U+6298,U+62B5,U+62CB,U+62CD,U+62D6,U+62FF,U+6307,U+6309,U+6311,U+632F,U+6368,U+6372,U+6388,U+6392,U+639B,U+63A2,U+63A5,U+63A8,U+63D0,U+63D2,U+63DB,U+641C,U+6469,U+649E,U+64AD,U+64B0,U+64CB,U+64CD,U+64E6,U+64EC,U+6536,U+6539,U+653E-653F,U+6548,U+6557,U+6559,U+6563,U+6574,U+6578,U+6587,U+6599,U+659C,U+65AF-65B0,U+65B9,U+65BC,U+65C1,U+65CB,U+65E5,U+65E9,U+660E,U+6613,U+661F,U+662F,U+6642,U+665A,U+666E-666F,U+66AB,U+66F2,U+66F4,U+66F8,U+6700,U+6703,U+6709,U+670D,U+671F,U+672C,U+677F,U+679C,U+67D0,U+67E5,U+6838,U+683C,U+6846,U+6848,U+687F,U+689D,U+695A,U+6982,U+69CB,U+6A19,U+6A21,U+6A23,U+6A58,U+6A5F,U+6A62,U+6A6B,U+6A94,U+6AA2,U+6B0A,U+6B21,U+6B3E,U+6B61,U+6B63,U+6B78,U+6BB5,U+6BCF,U+6BD4,U+6C23,U+6C2E,U+6C34,U+6C38,U+6C42,U+6C7A,U+6C92,U+6CBF,U+6CD5,U+6CE2,U+6D41,U+6D88-6D89,U+6DB5,U+6DE1,U+6DE8,U+6DF1,U+6DFA,U+6E05,U+6E1B,U+6E2C,U+6E90,U+6E96,U+6EA2,U+6EAB,U+6ED1,U+6EEF,U+700F,U+704C,U+70BA,U+7121,U+7126,U+7136,U+7167,U+71B1,U+71B5,U+7246,U+7248,U+725B,U+7269,U+7279,U+72AF,U+72F9,U+7368,U+7387,U+73A9,U+73ED,U+73FE,U+7406,U+74B0,U+751F,U+7528,U+7531,U+7559,U+7565,U+756B,U+7570,U+7576,U+758A,U+75D5,U+767B-767D,U+7684,U+7686,U+76D2,U+76EE,U+76F4,U+76F8,U+770B,U+771F,U+77E5,U+77ED,U+78B0,U+78BA,U+78C1,U+790E,U+793A,U+79C1,U+79D1-79D2,U+79FB,U+7A0B,U+7A0D,U+7A2E,U+7A31,U+7A4D,U+7A69,U+7A7A,U+7A7F,U+7A84,U+7A97,U+7AAE,U+7ACB,U+7AD9,U+7AE0,U+7AEF,U+7B26,U+7B2C,U+7B49,U+7B54,U+7B56,U+7B97,U+7BAD,U+7BC0,U+7BC4,U+7C21,U+7C27,U+7C92,U+7CBE,U+7D04-7D05,U+7D0B,U+7D19-7D1A,U+7D2B,U+7D2E-7D2F,U+7D42,U+7D44,U+7D50,U+7D55,U+7D61,U+7D66,U+7D71,U+7D93,U+7DA0,U+7DAD,U+7DB2,U+7DB8,U+7DDA,U+7DF4,U+7E2B,U+7E2E,U+7E3D,U+7E41,U+7E5E,U+7E7C,U+7E8C,U+7F6E,U+7FA9,U+7FD2,U+8001,U+8003,U+8033,U+805A,U+806F,U+8072,U+80CC,U+80FD,U+8139,U+8166,U+8173,U+81A8,U+81EA,U+81F4,U+8207,U+820A,U+8239,U+8272,U+8332,U+8377,U+83AB,U+842C,U+843D,U+8457,U+84CB,U+8584,U+859B,U+85A6,U+85CD,U+8655,U+865B,U+865F,U+884C,U+8861,U+8868,U+8870,U+88AB,U+88DC-88DD,U+88E1,U+88FD,U+8907,U+8981,U+898B,U+8996,U+89BA,U+89BD,U+89C0,U+89D2,U+89E3,U+8A08,U+8A0A,U+8A18,U+8A31,U+8A34,U+8A3B,U+8A66,U+8A71-8A72,U+8A8D,U+8A9E,U+8AA4,U+8AAA,U+8AB2,U+8ABF,U+8ACB,U+8AD6,U+8AE7,U+8AFE,U+8B1B,U+8B1D,U+8B70,U+8B80,U+8B8A,U+8B93,U+8CA0,U+8CBB,U+8CC7,U+8CEA,U+8D70,U+8D77,U+8D85,U+8D8A,U+8DA8,U+8DDD,U+8DDF,U+8DE1,U+8DEF,U+8DF3,U+8E29,U+8E64,U+8EAB,U+8ECC,U+8EF8,U+8F03,U+8F09,U+8F38,U+8F49,U+8FA6,U+8FCE,U+8FD1,U+8FF4,U+8FFD,U+9001,U+9006,U+900F,U+9014,U+9017,U+9019-901A,U+901F,U+9023,U+9031-9032,U+9047,U+904B,U+904E,U+9053,U+9060,U+9078,U+907A,U+9084,U+908A,U+90A3,U+90E8,U+90FD,U+914D,U+91CD,U+91CF,U+91D1,U+91DD,U+9215,U+925B,U+9304,U+932F,U+9375,U+93E1,U+9418,U+9577,U+9589,U+958B,U+9593,U+95B1,U+95DC,U+963B,U+9644,U+964D,U+9650,U+9664,U+967D,U+968E,U+96A8,U+96AA,U+96B1,U+96C6,U+96D9,U+96E2,U+96F6,U+96FB,U+9700,U+9732,U+975C,U+975E,U+9760,U+9762,U+97F3,U+9801,U+9806,U+9813,U+982D,U+983B,U+984C,U+984F,U+986F,U+98DB,U+9918,U+9996,U+99AC,U+9A57,U+9AD4,U+9AD8,U+9D3B,U+9EBC,U+9EDE,U+9F20,U+FF08-FF09,U+FF0C-FF0D,U+FF0F-FF10,U+FF19-FF1B,U+FF1D,U+FF1F,U+FF5C,U+FF5E}
-@font-face{font-family:"PhysSans";src:url("/fonts/phys-sans-1-0a2a2346.woff2") format("woff2");font-weight:400 800;font-display:swap;unicode-range:U+B3,U+203A,U+4E03,U+4E16,U+4E1F,U+4E26,U+4E32,U+4E43,U+4E45,U+4E4E-4E4F,U+4E58-4E59,U+4E7E,U+4E82,U+4EA8,U+4ECB,U+4EE4,U+4EFD,U+4F0F-4F10,U+4F2F-4F30,U+4F54,U+4F73,U+4F9B,U+500D,U+501F,U+5047,U+5075-5076,U+50BE,U+50F9,U+5100,U+5104,U+511F,U+5132,U+5144,U+516B,U+516D,U+5177,U+51B0,U+51B7,U+51CD,U+51F9,U+5207,U+5212,U+5217,U+5229,U+523B,U+5247,U+524A,U+525B,U+5272,U+5291,U+52AA,U+52D2,U+52FB,U+5317,U+531D,U+5340,U+5343,U+5347,U+5357,U+535C,U+5370-5371,U+5384,U+539A,U+53B2,U+53C8-53CA,U+53E3,U+53EB,U+53F8,U+5409-540A,U+5439,U+543B,U+5448,U+547D,U+5496,U+54C1,U+54C8,U+5561,U+5674,U+5678,U+56CA,U+570B,U+5718,U+5750,U+5761,U+5766,U+578B,U+57DF,U+57F9,U+5851,U+585E,U+588A,U+58A8,U+58C1,U+58DE,U+58FD,U+5929,U+592B,U+5938,U+593E,U+5947,U+59C6,U+5B54,U+5B64,U+5B69,U+5BA4,U+5BB0,U+5BB3,U+5BDF,U+5BF8,U+5C1A,U+5C3C,U+5C40,U+5C45-5C46,U+5C51,U+5C55,U+5C64,U+5C71,U+5CB8,U+5D16,U+5DE5,U+5DE7-5DE8,U+5DF4,U+5E02,U+5E06,U+5E0C,U+5E15,U+5E6B,U+5EB7,U+5EE0,U+5F17,U+5F1F,U+5F27,U+5F31,U+5F35,U+5F4E,U+5F57,U+5F69,U+5F7C,U+5FB7,U+5FC5,U+5FD9,U+601D,U+6025,U+6069,U+60C5,U+6108,U+610F,U+611B,U+6163,U+616E,U+6191,U+61B6,U+61F8,U+622A,U+6297,U+62BD,U+62C6-62C7,U+62C9,U+6301,U+6383,U+6389,U+63CF,U+640D,U+641E,U+6478,U+647B,U+6490,U+64CA,U+64DA,U+64E0,U+64FA,U+64FE,U+650F,U+652F,U+654F,U+6558,U+65A4-65A5,U+65B7,U+65BD,U+6676,U+6697,U+66FC,U+66FE,U+6708,U+671B,U+6728,U+672A-672B,U+6750,U+675F,U+6771,U+6790,U+67F1,U+67F5,U+6839,U+68AF-68B0,U+68D2,U+694A,U+696D,U+6975,U+6A4B,U+6B50,U+6B62,U+6B64-6B65,U+6B72,U+6BBC,U+6C0F,U+6C26,U+6C2B,U+6C60,U+6C7D,U+6C99,U+6CB3,U+6CB9,U+6CE1,U+6CE8,U+6D1E,U+6D3B,U+6D6E,U+6D78,U+6DB2,U+6DF7,U+6E6E,U+6E9C,U+6EC5,U+6EFE-6EFF,U+6F02,U+6F0F,U+6F38,U+6FC0,U+6FD5,U+6FE4,U+70B8,U+7194,U+71C8,U+7206,U+7210,U+723E,U+7247,U+72C0,U+7372,U+737B,U+73BB,U+7403,U+745E,U+7483,U+74E6,U+7522,U+7532,U+754C,U+758F,U+767E,U+7682,U+76E4,U+76EA,U+76FE,U+7701,U+773C,U+77AC,U+77DB,U+77E9,U+77F3,U+77FD,U+7814,U+7834,U+7837,U+78B3,U+78F7,U+7919,U+7A1C,U+7A76,U+7B1B,U+7BA1,U+7BB1,U+7C73,U+7C97,U+7CFB,U+7D0D,U+7D14,U+7D20,U+7D30,U+7DB1,U+7DCA,U+7DE3,U+7DF2,U+7E1B,U+7E31,U+7E54,U+7E69,U+7E9C,U+7F3A,U+7F85,U+7FFB,U+8005,U+800C,U+8017,U+807D,U+80A5,U+812B,U+8179,U+819C,U+81A0,U+81C2,U+81E8,U+81F3,U+8209,U+82AF,U+82E5,U+82F1,U+860B,U+864E,U+8667,U+8679,U+878D,U+87BA,U+885B,U+885D,U+88C2,U+897F,U+898F,U+89F8,U+8A00,U+8A2D,U+8AC7,U+8B49,U+8B5C,U+8B66,U+8C61,U+8C9D,U+8CA2,U+8DD1,U+8E7A,U+8E8D,U+8ECA,U+8EDF,U+8F15,U+8F3B,U+8FA8,U+8FF0,U+9010,U+9020,U+9054,U+905E,U+9069,U+9075,U+9077,U+9130,U+91AB,U+91CB,U+9237,U+9285,U+92C1,U+92FC,U+9336,U+93B3,U+9435,U+947D,U+9583,U+9694,U+9699,U+969B-969C,U+96A7,U+96DC,U+96F2,U+9704,U+970D,U+9727,U+9739,U+9742,U+97FF,U+9802,U+9805,U+9808,U+9810,U+985E,U+99D0,U+99DB,U+9B06,U+9B45,U+9CF4,U+9ECF,U+9ED1,U+9F61}
-@font-face{font-family:"PhysSans";src:url("/fonts/phys-sans-2-40a01a88.woff2") format("woff2");font-weight:400 800;font-display:swap;unicode-range:U+6232,U+6234,U+623F,U+626E,U+6295,U+62D2,U+62D4,U+62FC,U+6316,U+633D,U+642D,U+6495,U+64F4,U+6551,U+6591,U+6620,U+6717,U+676F,U+6881,U+68B3,U+68C9,U+68EE,U+69CD,U+6A02,U+6A11,U+6B7B,U+6B98,U+6BCD,U+6C27,U+6CB8,U+6CBB,U+6CC1,U+6CDB,U+6D32,U+6DBC,U+6E38,U+6EF4,U+6F14,U+6F6E,U+6FFE,U+7063,U+706B,U+7159,U+715E,U+71D2,U+71D9,U+71E5,U+731C,U+7529,U+7642,U+76AE,U+7729,U+775B,U+786C,U+787C,U+789F,U+7981,U+7A81,U+7B52,U+7BE9,U+7D72,U+7E43,U+7E96,U+7F69,U+7FFC,U+8089,U+808C,U+819A,U+822C,U+82B1,U+84B8,U+853D,U+8B0E,U+8B77,U+8C37,U+8D6B,U+8DB3,U+8F1B,U+8F2A,U+9000,U+9003,U+903C,U+904A,U+91CC,U+91CE,U+9318,U+934D,U+937A,U+9396,U+93B5,U+963F-9640,U+96D6,U+96E8,U+96F7,U+9769,U+97A6,U+97C6,U+97CB,U+9818,U+98A8,U+9A45,U+9F13,U+9F4A}
+@font-face{font-family:"PhysSans";src:url("/fonts/phys-sans-0-b43282c5.woff2") format("woff2");font-weight:400 800;font-display:swap;unicode-range:U+20-7E,U+B0,U+B2,U+B7,U+BD,U+D7,U+394,U+3A6,U+3A9,U+3B2-3B3,U+3B5,U+3B8,U+3BB-3BC,U+3C0,U+3C4,U+3C6,U+3C9,U+2013,U+2026,U+3000-3002,U+300C-300D,U+4E00,U+4E0A-4E0B,U+4E0D,U+4E26,U+4E2D,U+4E3B,U+4E4B,U+4E86,U+4E8B-4E8C,U+4E92,U+4E9B,U+4EA4,U+4EAE,U+4EC0,U+4ECD,U+4ED6,U+4EE3,U+4EE5,U+4EF0,U+4EFB,U+4F38,U+4F3A,U+4F3C,U+4F4D-4F4F,U+4F55,U+4F5C,U+4F60,U+4F86,U+4F8B,U+4F96,U+4FC2,U+4FDD,U+500B,U+5011-5012,U+503C,U+504F,U+505A,U+505C,U+50B3,U+50CF,U+5141,U+5143,U+5145,U+5148-5149,U+514D,U+5165,U+5167-5169,U+516C,U+5171,U+5176,U+518A,U+518D,U+51F8,U+51FA,U+51FD,U+5206,U+521D,U+5230,U+5236,U+524D,U+5269,U+5275,U+529B,U+529F-52A0,U+52D5,U+52DE,U+52E2,U+5305,U+5316,U+532F,U+5341,U+534A,U+5361,U+5373,U+539F,U+53C3,U+53CD,U+53D6-53D7,U+53E5-53E6,U+53EA,U+53EF-53F0,U+53F3,U+5404,U+5408,U+540C-540D,U+5411,U+542B,U+5438,U+544A,U+5468,U+548C,U+54EA,U+554F,U+55AE,U+5668,U+56DE,U+56E0,U+5708,U+570D,U+5713,U+5716,U+5728,U+5730,U+5740,U+5747,U+5782,U+57FA,U+5831,U+5834,U+584A,U+589E,U+58D3,U+5916,U+591A,U+5927,U+592A,U+5931,U+597D,U+5982,U+59CB,U+59D3,U+5B50,U+5B57-5B58,U+5B78,U+5B83,U+5B88,U+5B8C,U+5B9A,U+5BB9,U+5BE6,U+5BEB-5BEC,U+5C01,U+5C04,U+5C0B,U+5C0D,U+5C0F,U+5C11,U+5C16,U+5C31,U+5C3E,U+5C4F,U+5C6C,U+5CF0,U+5DE6,U+5DEE,U+5DF1-5DF2,U+5E03,U+5E33,U+5E36,U+5E38,U+5E45,U+5E72-5E73,U+5E7E,U+5EA6-5EA7,U+5EAB,U+5EE3,U+5EF6,U+5F0F,U+5F15,U+5F26,U+5F37,U+5F48,U+5F62,U+5F71,U+5F80,U+5F88,U+5F8B-5F8C,U+5F91,U+5F97,U+5F9E,U+5FA9-5FAA,U+5FC3,U+5FEB,U+5FF5,U+5FFD,U+600E,U+6027,U+6046,U+6062,U+60F3,U+611F,U+614B,U+6162,U+61C2,U+61C9,U+6210-6211,U+6216,U+6240,U+624B,U+624D,U+6253,U+627E,U+6280,U+628A,U+6293,U+6296,U+6298,U+62B5,U+62CB,U+62CD,U+62D6,U+6307,U+6309,U+632F,U+6372,U+6388,U+6392,U+63A2,U+63A5,U+63A8,U+63D0,U+63DB,U+641C,U+6469,U+649E,U+64AD,U+64B0,U+64CB,U+64E6,U+64EC,U+6536,U+6539,U+653E,U+6548,U+6557,U+6559,U+6563,U+6574,U+6578,U+6587,U+6599,U+659C,U+65AF-65B0,U+65B9,U+65BC,U+65C1,U+65CB,U+65E5,U+660E,U+661F,U+662F,U+6642,U+666E-666F,U+66AB,U+66F2,U+66F8,U+6700,U+6703,U+6709,U+670D,U+671F,U+672C,U+677F,U+679C,U+67E5,U+6838,U+683C,U+6846,U+6848,U+687F,U+689D,U+695A,U+69CB,U+6A19,U+6A21,U+6A58,U+6A5F,U+6A62,U+6A6B,U+6A94,U+6AA2,U+6B0A,U+6B21,U+6B3E,U+6B61,U+6B63,U+6B78,U+6BB5,U+6BCF,U+6BD4,U+6C23,U+6C2E,U+6C34,U+6C38,U+6C7A,U+6C92,U+6CBF,U+6CD5,U+6CE2,U+6D41,U+6D88-6D89,U+6DB5,U+6DE8,U+6E05,U+6E1B,U+6E2C,U+6E90,U+6E96,U+6EA2,U+6EAB,U+6ED1,U+6EEF,U+700F,U+704C,U+70BA,U+7121,U+7126,U+71B1,U+71B5,U+7246,U+725B,U+7269,U+72F9,U+7368,U+7387,U+73FE,U+7406,U+74B0,U+7528,U+7531,U+756B,U+7570,U+7576,U+758A,U+75D5,U+767C-767D,U+7684,U+7686,U+76D2,U+76EE,U+76F4,U+76F8,U+770B,U+77E5,U+77ED,U+78B0,U+78BA,U+78C1,U+793A,U+79C1,U+79D1-79D2,U+79FB,U+7A0B,U+7A0D,U+7A31,U+7A4D,U+7A7A,U+7A84,U+7A97,U+7AAE,U+7ACB,U+7AD9,U+7AE0,U+7AEF,U+7B26,U+7B2C,U+7B49,U+7B54,U+7B97,U+7BAD,U+7BC0,U+7BC4,U+7C21,U+7C27,U+7C92,U+7CFB,U+7D04-7D05,U+7D0B,U+7D19,U+7D2B,U+7D42,U+7D44,U+7D50,U+7D55,U+7D61,U+7D71,U+7D93,U+7DA0,U+7DAD,U+7DB2,U+7DB8,U+7DDA,U+7DF4,U+7E2B,U+7E2E,U+7E3D,U+7E41,U+7E5E,U+7E7C,U+7E8C,U+7F6E,U+7FA9,U+7FD2,U+8003,U+8033,U+805A,U+806F,U+8072,U+80CC,U+80FD,U+8139,U+81A8,U+81EA,U+81F4,U+8207,U+8239,U+8272,U+8332,U+8377,U+83AB,U+842C,U+843D,U+84CB,U+8584,U+85A6,U+85CD,U+8655,U+865B,U+865F,U+884C,U+8861,U+8868,U+8870,U+88AB,U+88DD,U+88E1,U+88FD,U+8981,U+8996,U+89BA,U+89BD,U+89C0,U+89D2,U+89E3,U+8A08,U+8A18,U+8A31,U+8A3B,U+8A66,U+8A71-8A72,U+8AA4,U+8AAA,U+8AB2,U+8ABF,U+8ACB,U+8AD6,U+8AE7,U+8AFE,U+8B1B,U+8B1D,U+8B80,U+8B8A,U+8B93,U+8CA0,U+8CBB,U+8CC7,U+8CEA,U+8D70,U+8D77,U+8D85,U+8D8A,U+8DDD,U+8DE1,U+8DEF,U+8DF3,U+8E64,U+8EAB,U+8ECC,U+8EF8,U+8F03,U+8F09,U+8F38,U+8F49,U+8FCE,U+8FD1,U+8FF4,U+8FFD,U+9001,U+9006,U+900F,U+9017,U+9019-901A,U+901F,U+9023,U+9031-9032,U+904B,U+904E,U+9053,U+9060,U+9078,U+908A,U+90A3,U+90E8,U+90FD,U+91CD,U+91CF,U+91D1,U+91DD,U+9215,U+925B,U+9304,U+932F,U+93E1,U+9418,U+9577,U+9589,U+958B,U+9593,U+95B1,U+963B,U+9644,U+964D,U+9650,U+9664,U+967D,U+96A8,U+96B1,U+96C6,U+96D9,U+96E2,U+96F6,U+96FB,U+9700,U+975C,U+975E,U+9760,U+9762,U+97F3,U+97FF,U+9801,U+9806,U+9813,U+982D,U+983B,U+984C,U+984F,U+986F,U+98DB,U+9918,U+9996,U+9A57,U+9AD4,U+9AD8,U+9D3B,U+9EBC,U+9EDE,U+FF08-FF09,U+FF0C-FF0D,U+FF0F-FF10,U+FF19-FF1B,U+FF1D,U+FF5C}
+@font-face{font-family:"PhysSans";src:url("/fonts/phys-sans-1-47da5f52.woff2") format("woff2");font-weight:400 800;font-display:swap;unicode-range:U+B3,U+203A,U+4E03,U+4E09,U+4E14,U+4E1F,U+4E32,U+4E43,U+4E45,U+4E4E,U+4E58-4E59,U+4E5F,U+4E7E,U+4E82,U+4E94,U+4EA8,U+4EBA,U+4ECB,U+4ED8,U+4EE4,U+4EF6,U+4EFD,U+4F0F-4F10,U+4F2F-4F30,U+4F46,U+4F7F,U+4F9B,U+4F9D,U+4FEE,U+500D,U+501F,U+5047,U+5074-5076,U+50BE,U+50F9,U+5100,U+511F,U+5132,U+514B,U+516B,U+516D,U+5177-5178,U+51B0,U+51B7,U+51CD,U+51F9,U+5207,U+5212,U+5217,U+5224-5225,U+5229,U+523B,U+5247,U+525B,U+5272,U+5291,U+52AA,U+52D2,U+52FB,U+5317,U+531D,U+5340,U+5343,U+5347,U+5357,U+535C,U+5370-5371,U+537B,U+5384,U+539A,U+53BB,U+53C8-53CA,U+53E3-53E4,U+53EB,U+53F8,U+540A,U+5439,U+543B,U+5448,U+547D,U+5496,U+54C1,U+555F,U+5561,U+5674,U+5678,U+56B4,U+56CA,U+56DB,U+56FA,U+570B,U+5718,U+5750,U+5761,U+5766,U+578B,U+57F9,U+5851,U+585E,U+588A,U+58A8,U+58C1,U+58DE,U+58EB,U+58FD,U+5920,U+5929,U+592B,U+592E,U+593E,U+5947,U+5957,U+59C6,U+5A01,U+5B54,U+5B64,U+5B69,U+5B87,U+5B89,U+5B99,U+5BA4,U+5BB6,U+5BC6,U+5BDF,U+5C0E,U+5C3A,U+5C3C,U+5C40,U+5C51,U+5C64,U+5C71,U+5CB8,U+5D16,U+5DE5,U+5DE7-5DE8,U+5DF4,U+5E02,U+5E06,U+5E0C,U+5E15,U+5E6B,U+5E74,U+5E8F,U+5E95,U+5EB7,U+5EE0,U+5EFA,U+5F17,U+5F27,U+5F31,U+5F35,U+5F4E,U+5F57,U+5F69,U+5F7C,U+5FAE,U+5FB7,U+5FC5,U+6069,U+610F,U+611B,U+6163,U+6191,U+622A,U+6297,U+62BD,U+62C6-62C7,U+62C9,U+6301,U+6383,U+6389,U+63CF,U+63D2,U+640D,U+641E,U+6478,U+6490,U+64CA,U+64DA,U+64FA,U+64FE,U+650F,U+652F,U+6558,U+65A4-65A5,U+65B7,U+65BD,U+6613,U+6676,U+6697,U+66F4,U+66FC,U+6708,U+671B,U+6728,U+672B,U+6750,U+675F,U+6771,U+6790,U+67D0,U+67F1,U+67F5,U+6839,U+68AF-68B0,U+68D2,U+694A,U+6975,U+6A23,U+6A4B,U+6B50,U+6B62,U+6B64-6B65,U+6B72,U+6BBC,U+6C0F,U+6C26,U+6C2B,U+6C42,U+6C60,U+6C7D,U+6CB3,U+6CB9,U+6CE1,U+6CE8,U+6D3B,U+6D6E,U+6D78,U+6DB2,U+6DF1,U+6DF7,U+6E9C,U+6EFE,U+6F38,U+6FD5,U+70B8,U+7136,U+7167,U+7194,U+71C8,U+7206,U+7210,U+723E,U+7247-7248,U+7279,U+72C0,U+737B,U+73BB,U+7403,U+745E,U+7483,U+74E6,U+751F,U+7522,U+7532,U+754C,U+7559,U+7565,U+758F,U+7682,U+76E4,U+76EA,U+7701,U+771F,U+773C,U+77AC,U+77E9,U+77F3,U+7834,U+78B3,U+7919,U+7A1C,U+7A2E,U+7A69,U+7A7F,U+7B1B,U+7BA1,U+7BB1,U+7C73,U+7C97,U+7CBE,U+7D14,U+7D1A,U+7D20,U+7D2F-7D30,U+7DB1,U+7DCA,U+7DE3,U+7E1B,U+7E31,U+7E69,U+7E9C,U+7F85,U+7FFB,U+8005,U+800C,U+8017,U+807D,U+80A5,U+812B,U+8179,U+819C,U+81C2,U+81E8,U+81F3,U+8209,U+82E5,U+82F1,U+8457,U+860B,U+864E,U+8667,U+8679,U+878D,U+87BA,U+885B,U+885D,U+88C2,U+88DC,U+8907,U+897F,U+898B,U+898F,U+89F8,U+8A00,U+8A2D,U+8A34,U+8AC7,U+8B49,U+8B5C,U+8B66,U+8C61,U+8C9D,U+8CA2,U+8DA8,U+8DD1,U+8DDF,U+8E7A,U+8E8D,U+8ECA,U+8EDF,U+8F15,U+8F3B,U+8FA8,U+8FF0,U+9010,U+9020,U+9047,U+9054,U+905E,U+9069,U+9077,U+9084,U+9130,U+91CB,U+9285,U+92FC,U+9336,U+9435,U+947D,U+9583,U+95DC,U+968E,U+969B-969C,U+96AA,U+96F2,U+9704,U+970D,U+9727,U+9802,U+9808,U+9810,U+985E,U+99AC,U+99D0,U+99DB,U+9B06,U+9CF4,U+9ECF,U+9ED1,U+FF1F}
+@font-face{font-family:"PhysSans";src:url("/fonts/phys-sans-2-c24e1e59.woff2") format("woff2");font-weight:400 800;font-display:swap;unicode-range:U+5FD9,U+601D,U+6025,U+60C5,U+61F8,U+6234,U+623F,U+626E,U+6295,U+62D2,U+62D4,U+62FC,U+6311,U+633D,U+6368,U+639B,U+6495,U+64CD,U+64E0,U+6551,U+6591,U+6620,U+66FE,U+6717,U+672A,U+676F,U+6881,U+68B3,U+68C9,U+68EE,U+69CD,U+6A02,U+6A11,U+6B7B,U+6BCD,U+6C99,U+6CB8,U+6CBB,U+6CC1,U+6CDB,U+6DBC,U+6E38,U+6EF4,U+6EFF,U+6F02,U+6F14,U+6F6E,U+6FC0,U+6FFE,U+7063,U+706B,U+7159,U+715E,U+71D2,U+71D9,U+71E5,U+731C,U+7372,U+7642,U+767E,U+76AE,U+76FE,U+7729,U+775B,U+77DB,U+7814,U+786C,U+789F,U+7A76,U+7A81,U+7B52,U+7BE9,U+7D66,U+7D72,U+7DF2,U+7E43,U+7E54,U+7E96,U+7F3A,U+7F69,U+7FFC,U+8089,U+808C,U+819A,U+81A0,U+822C,U+82AF,U+82B1,U+84B8,U+853D,U+8A0A,U+8A8D,U+8B77,U+8C37,U+8F1B,U+8F2A,U+9003,U+9075,U+914D,U+91AB,U+91CE,U+9237,U+9318,U+934D,U+93B3,U+963F-9640,U+9694,U+96DC,U+96E8,U+96F7,U+9769,U+97A6,U+97C6,U+97CB,U+9818,U+98A8,U+9A45,U+9F4A}
 /* FONTS:END */
 :root{
-  color-scheme:light;
-  --bg:#faf8f3;--card:#fff;--ink:#1f2a37;--ink2:#566273;--line:#e7e2d7;
-  --brand:#1f4fb8;--brand2:#1f5fd1;--brand-l:#e9f0fd;--amber:#8a4b00;--amber-l:#fff1d1;
-  --ok:#13795b;--ok-l:#def4ea;--bad:#b3261e;--bad-l:#fde7e5;--radius:16px;
-  --shadow:0 1px 2px rgba(60,50,20,.06),0 8px 24px rgba(60,50,20,.06);
-  /* 各單元專屬色：--u 文字與線條（對白底夠深），--ul 淡底 */
-  --c-mechanics:#1f5fd1;--cl-mechanics:#e9f0fd;--c-waves:#0b7a75;--cl-waves:#dcf4f1;
-  --c-thermo:#b04400;--cl-thermo:#ffeadb;--c-em:#6d3fc0;--cl-em:#efe8fb;
-  --c-optics:#b0285f;--cl-optics:#fde6ef;--c-modern:#2f7a1f;--cl-modern:#e4f4de;
+  --bg:#f6f8fb;--card:#fff;--ink:#16202e;--ink2:#52607a;--line:#d7deea;
+  --brand:#16325c;--brand2:#2a5db0;--brand-l:#e6eefb;--amber:#8a5200;--amber-l:#fff3d6;
+  --ok:#17784a;--ok-l:#dff3e8;--bad:#b3261e;--bad-l:#fde7e5;--radius:14px;
+  --shadow:0 1px 2px rgba(22,50,92,.08),0 6px 20px rgba(22,50,92,.06);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0e1522;--card:#161f31;--ink:#e8edf6;--ink2:#a3b0c7;--line:#2a3750;--brand:#9cc0ff;--brand2:#7fa9f0;
+    --brand-l:#1b2a47;--amber:#ffc15a;--amber-l:#3a2c10;--ok:#6fe0a5;--ok-l:#12331f;--bad:#ff9a92;--bad-l:#3b1713;--shadow:none}
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -25,21 +24,23 @@ a{color:var(--brand2)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .muted{color:var(--ink2)}.small{font-size:.88rem}
 /* 頁首 */
-.top{background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.top{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;color:var(--brand);text-decoration:none}
 .mark{display:block;width:34px;height:34px;border-radius:8px}
 .top nav{display:flex;gap:4px 14px;flex-wrap:wrap}
-.top nav a{color:var(--ink2);text-decoration:none;padding:8px 12px;font-size:.95rem;border-radius:999px}
-.top nav a:hover{color:var(--brand);background:var(--brand-l)}
-.top nav a[aria-current=page]{color:var(--brand);background:var(--brand-l);font-weight:700}
+.top nav a{color:var(--ink2);text-decoration:none;padding:10px 4px;font-size:.95rem}
+.top nav a:hover{color:var(--brand)}
 /* 首頁 */
-.kicker{margin:0 0 6px;color:var(--u,var(--amber));font-weight:800;font-size:.9rem;letter-spacing:.04em}
-h1{font-size:clamp(1.7rem,5.2vw,2.5rem);line-height:1.3;margin:.2em 0 .4em;color:var(--ink)}
-h2{font-size:1.35rem;line-height:1.4;margin:1.8em 0 .5em;color:var(--ink)}
+.hero{padding:40px 0 18px}
+.kicker{margin:0 0 6px;color:var(--amber);font-weight:800;font-size:.9rem;letter-spacing:.04em}
+h1{font-size:clamp(1.7rem,5.2vw,2.5rem);line-height:1.3;margin:.2em 0 .4em;color:var(--brand)}
+h2{font-size:1.35rem;line-height:1.4;margin:1.8em 0 .5em;color:var(--brand)}
 .lead{font-size:1.1rem;color:var(--ink2);margin:.2em 0 1em}
+.stats{display:flex;gap:28px;margin:18px 0}
+.stats b{display:block;font-size:2rem;line-height:1.1;color:var(--brand)}.stats span{font-size:.9rem;color:var(--ink2)}
 .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.btn{font:inherit;font-weight:700;background:var(--brand);color:#fff;border:2px solid var(--brand);border-radius:999px;padding:8px 20px;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+.btn{font:inherit;font-weight:700;background:var(--brand);color:var(--bg);border:2px solid var(--brand);border-radius:999px;padding:8px 20px;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
 .btn.ghost{background:transparent;color:var(--brand)}
 .btn:hover{filter:brightness(1.1)}
 .btn[aria-pressed="true"]{background:var(--ok);border-color:var(--ok);color:#fff}
@@ -48,12 +49,12 @@ h2{font-size:1.35rem;line-height:1.4;margin:1.8em 0 .5em;color:var(--ink)}
 input[type=search],.ans,textarea{font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:12px;padding:10px 14px;min-height:44px;width:100%}
 .ans{width:11em;max-width:100%}
 .units{display:grid;gap:16px;margin-bottom:40px}
-.unit{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--u,var(--brand));border-radius:var(--radius);padding:6px 18px 16px;box-shadow:var(--shadow)}
+.unit{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:6px 18px 14px;box-shadow:var(--shadow)}
 .unit h2{margin:.7em 0 0}
 .chlist{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px}
-.chlist a{display:flex;gap:10px;align-items:center;padding:10px 12px;border:2px solid var(--line);background:#fff;border-radius:12px;text-decoration:none;color:var(--ink);min-height:48px}
-.chlist a:hover{border-color:var(--u,var(--brand2));background:var(--ul,var(--brand-l))}
-.chlist .no{flex:none;width:28px;height:28px;border-radius:50%;background:var(--ul,var(--brand-l));color:var(--u,var(--brand));display:grid;place-items:center;font-weight:800;font-size:.85rem}
+.chlist a{display:flex;gap:10px;align-items:center;padding:10px 12px;border:2px solid var(--line);border-radius:12px;text-decoration:none;color:var(--ink);min-height:48px}
+.chlist a:hover{border-color:var(--brand2)}
+.chlist .no{flex:none;width:28px;height:28px;border-radius:50%;background:var(--brand-l);color:var(--brand);display:grid;place-items:center;font-weight:800;font-size:.85rem}
 .chlist .tt{flex:1}
 .chlist a.done{border-color:var(--ok);background:var(--ok-l)}
 .chlist a.done .ck::after{content:"✓";color:var(--ok);font-weight:900}
@@ -107,74 +108,5 @@ dialog .row{justify-content:flex-end;margin-top:10px}
 /* 段落與清單裡的行內長公式允許在等號、加號處換行，手機才不會橫向溢出（獨立一行的 .eq 靠自己的橫向捲動） */
 p .katex,li .katex,.steps .katex{white-space:normal}
 .linkbtn{font:inherit;background:none;border:0;color:var(--brand2);text-decoration:underline;cursor:pointer;padding:6px 0;min-height:36px}
-@media (max-width:600px){body{font-size:16.5px}.chlist{grid-template-columns:1fr}.ans{width:100%}}
+@media (max-width:600px){body{font-size:16.5px}.hero{padding-top:24px}.stats{gap:18px}.chlist{grid-template-columns:1fr}.ans{width:100%}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-
-/* 單元配色：掛在 .unit 或章節頁的 [data-unit] 上 */
-[data-unit=mechanics]{--u:var(--c-mechanics);--ul:var(--cl-mechanics)}
-[data-unit=waves]{--u:var(--c-waves);--ul:var(--cl-waves)}
-[data-unit=thermo]{--u:var(--c-thermo);--ul:var(--cl-thermo)}
-[data-unit=em]{--u:var(--c-em);--ul:var(--cl-em)}
-[data-unit=optics]{--u:var(--c-optics);--ul:var(--cl-optics)}
-[data-unit=modern]{--u:var(--c-modern);--ul:var(--cl-modern)}
-.chapter[data-unit] h1{color:var(--u)}
-/* 歡迎頁 */
-.hero{margin:22px 0 8px;padding:40px 28px 30px;border-radius:24px;border:1px solid var(--line);
-  background:radial-gradient(900px 300px at 85% -10%,#dbe8ff 0,transparent 70%),radial-gradient(600px 260px at 0 110%,#ffe9b8 0,transparent 70%),#fff;box-shadow:var(--shadow)}
-.pill{display:inline-block;margin:0 0 10px;padding:4px 14px;border-radius:999px;background:var(--ok-l);color:var(--ok);font-weight:800;font-size:.88rem}
-.hero h1{margin-top:.1em}
-.hero .lead{max-width:36em}
-.hero .row .btn{padding:10px 26px}
-.facts{display:flex;gap:8px 22px;flex-wrap:wrap;list-style:none;padding:0;margin:18px 0 0;color:var(--ink2);font-size:.93rem}
-.facts b{color:var(--ink);font-size:1.15rem}
-.sec{margin:34px 0 0}
-.sec>h2{margin:0 0 4px}
-.sec>.muted{margin:0 0 12px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;list-style:none;padding:0;margin:12px 0 0}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow);position:relative}
-.card h3{margin:.1em 0 .2em;font-size:1.08rem}
-.card p{margin:.2em 0;color:var(--ink2);font-size:.97rem;line-height:1.7}
-.card .n{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--brand);color:#fff;font-weight:800;margin-bottom:6px}
-a.card{display:block;color:inherit;text-decoration:none;border-width:2px}
-a.card:hover{border-color:var(--brand2);transform:translateY(-2px)}
-a.card h3{color:var(--brand)}
-.card{transition:transform .15s,border-color .15s}
-.jump{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 0;padding:0;list-style:none}
-.jump a{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;background:var(--ul);color:var(--u);font-weight:700;text-decoration:none;border:1px solid transparent;min-height:40px}
-.jump a:hover{border-color:var(--u)}
-.unit-h{display:flex;align-items:baseline;justify-content:space-between;gap:8px 14px;flex-wrap:wrap}
-.unit-h h2{color:var(--u)}
-.upg{font-size:.88rem;font-weight:700;color:var(--u);background:var(--ul);padding:2px 12px;border-radius:999px}
-.search{margin:34px 0 14px}
-.search input{box-shadow:var(--shadow)}
-/* 說明頁 */
-.doc .lead{margin-top:0}
-.doc h2{margin-top:2em;padding-top:.2em}
-.doc .cards{margin-bottom:6px}
-.demo{display:grid;gap:4px}
-.tbl{overflow-x:auto;margin:.8em 0}
-.tbl table{border-collapse:collapse;width:100%;min-width:480px;background:var(--card);border-radius:12px;overflow:hidden}
-.tbl th,.tbl td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;font-size:.96rem}
-.tbl th{background:var(--brand-l);color:var(--ink)}
-.faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:2px 16px;margin:8px 0}
-.faq summary{color:var(--ink)}
-.faq details[open] summary{color:var(--brand)}
-.faq details p{margin:.2em 0 .8em;color:var(--ink2)}
-.toc{display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:12px 0 0}
-.toc a{padding:6px 14px;border-radius:999px;background:var(--brand-l);color:var(--brand);text-decoration:none;font-weight:700;font-size:.93rem;min-height:36px;display:inline-flex;align-items:center}
-@media (max-width:600px){.hero{padding:26px 18px 22px;border-radius:20px}}
-#units{margin-top:16px}
-.doc{padding-top:20px}
-.doc ul.toc,.doc ul.cards,.doc ol.cards{padding-left:0}
-/* 章節頁：目錄、練習進度、完成提示 */
-.chapter ul.toc{padding-left:0;margin:14px 0 4px}
-.pprog{display:flex;align-items:center;gap:12px;margin:10px 0 4px;font-weight:700;color:var(--ink2);font-size:.95rem}
-.pprog .bar{flex:1;max-width:240px;height:8px;border-radius:999px;background:var(--line);overflow:hidden}
-.pprog .bar i{display:block;height:100%;width:0;background:var(--ok);border-radius:999px;transition:width .3s}
-.cta{margin:18px 0;padding:14px 18px;border-radius:var(--radius);background:var(--ok-l);border:2px solid var(--ok)}
-.cta p{margin:.2em 0 .6em}
-.res:empty{display:none}
-.res{min-height:0}
-.prob .row{margin-top:2px}
-.prob.ok{background:linear-gradient(var(--ok-l),var(--ok-l)) top/100% 4px no-repeat,var(--card)}
-.sec+.sec{margin-top:30px}

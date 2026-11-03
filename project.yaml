@@ -9,21 +9,3 @@
 Cloudflare帳號編號: d286dc43743f9a5e5dea99efea359ee5
 Worker名稱: physics-explorer
 網域: physics.hunglun.com
-# 歡迎頁（共用產生器 supereduweb/runner/welcome.py 讀這裡，由 scripts/make.py 在本機產出並提交進 public/；CI 只跑 build.py，不跑產生器）
-歡迎頁:
-  當首頁: true
-  小標: 免費、免註冊、不放廣告
-  標語: 從力學到近代物理，白話講解、拖一拖模擬、做題目，自己算得出來。
-  稱呼: 同學
-  主色: "#1F4FB8"
-  輔色: "#E8893A"
-  亮色: "#FCE3BF"
-  數字:
-    - {數字: "45", 說明: 章講解}
-    - {數字: "225", 說明: 題附解答}
-    - {數字: "20", 說明: 個互動模擬}
-  按鈕文字: 開始學習
-  連結:
-    - {文字: 全部單元, 網址: /home}
-    - {文字: 怎麼用, 網址: /help}
-  資料來源: 內容由鴻綸科技原創，公式與答案皆經程式驗算
