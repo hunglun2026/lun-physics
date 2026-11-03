@@ -70,7 +70,7 @@ def main() -> int:
     if shots:
         shots.mkdir(parents=True, exist_ok=True)
     chapters = json.loads((PUB / "data" / "chapters.json").read_text(encoding="utf-8"))
-    pages = ["/", "/help", "/about", "/privacy"] + [f"/c/{c['id']}" for c in chapters if not only or c["id"] == only]
+    pages = ["/", "/home", "/help", "/about", "/privacy"] + [f"/c/{c['id']}" for c in chapters if not only or c["id"] == only]
     srv, base = serve()
     bad: list[str] = []
     with sync_playwright() as pw:
@@ -107,7 +107,7 @@ def main() -> int:
 
         # 功能流程（桌機）：答題 → 進度 → 首頁已讀 → 回報對話框
         ctx = br.new_context(viewport={"width": 1280, "height": 800}); pg = ctx.new_page()
-        pg.goto(base + "/", wait_until="networkidle"); pg.wait_for_timeout(300)
+        pg.goto(base + "/home", wait_until="networkidle"); pg.wait_for_timeout(300)
         nfont = pg.evaluate("() => [...document.fonts].filter(f => f.family.includes('PhysSans') && f.status === 'loaded').length")
         if nfont < 1:
             bad.append("功能：自架中文字型 PhysSans 沒有載入（會退回系統字型）")
@@ -125,7 +125,7 @@ def main() -> int:
         if first not in saved or 0 not in saved[first].get("solved", []):
             bad.append("功能：答對沒有寫進進度")
         pg.locator("#doneBtn").click()
-        pg.goto(base + "/", wait_until="networkidle")
+        pg.goto(base + "/home", wait_until="networkidle")
         if not pg.locator(f"a[data-ch={first}].done").count():
             bad.append("功能：首頁沒顯示已讀")
         pg.goto(f"{base}/c/{first}", wait_until="networkidle")

@@ -73,7 +73,7 @@ def keep(text: str) -> set:
 def groups():
     """回傳 (第 0 包的字集合, {章節頁: 字集合})。"""
     ui = ""
-    for name in ("index", "about", "help", "privacy"):
+    for name in ("index", "home", "about", "help", "privacy"):
         f = PUB / f"{name}.html"
         if f.exists():
             ui += page_text(f)
@@ -95,7 +95,8 @@ def chunks() -> list:
     ordered = sorted(rest, key=lambda c: (-freq.get(c, 0), c))
     packs = [ordered[i:i + CHUNK] for i in range(0, len(ordered), CHUNK)]
     if len(packs) > 1 and len(packs[-1]) < CHUNK // 4:
-        packs[-2] += packs.pop()
+        last = packs.pop()  # 先 pop 再加：原本 packs[-2] += packs.pop() 在剩兩包時會索引超出範圍
+        packs[-1] += last
     return ["".join(sorted(first))] + ["".join(sorted(p)) for p in packs]
 
 

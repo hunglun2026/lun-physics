@@ -72,4 +72,33 @@
     });
     U.button(ui, "重新開始", reset); U.button(ui, "暫停／繼續", function () { lp.toggle(); });
   };
+  S["modern-box"] = function (box) {
+    var ui = U.make(box, 640, 320, "無限深井中電子的波函數、機率密度與能階"), c = ui.ctx;
+    U.slider(ui, "n", "量子數 n", 1, 5, 1, 1, "", 0);
+    U.slider(ui, "L", "井寬 L", 0.3, 1.5, 0.05, 0.5, "nm", 2);
+    var E1c = 0.376; // eV·nm²，電子的 h²/(8m)
+    function draw() {
+      U.clear(ui); var p = ui.p, n = Math.round(p.n), L = p.L, i, E = E1c * n * n / (L * L);
+      var A = U.axes(ui, 50, 20, 340, 250, 0, L, -1.6, 1.6, "x (nm)", "");
+      c.fillStyle = "#e9f0fd"; c.beginPath(); c.moveTo(A.X(0), A.Y(0)); // |ψ|² 填色（相對尺度）
+      for (i = 0; i <= 200; i++) { var x = L * i / 200, y = (2 / L) * Math.pow(Math.sin(n * Math.PI * x / L), 2) * L / 2; c.lineTo(A.X(x), A.Y(y)); }
+      c.lineTo(A.X(L), A.Y(0)); c.closePath(); c.fill();
+      c.beginPath(); for (i = 0; i <= 200; i++) { var x2 = L * i / 200, y2 = Math.sqrt(2 / L) * Math.sin(n * Math.PI * x2 / L) * Math.sqrt(L / 2); i ? c.lineTo(A.X(x2), A.Y(y2)) : c.moveTo(A.X(x2), A.Y(y2)); }
+      c.strokeStyle = U.BLUE; c.lineWidth = 2.5; c.stroke();
+      U.line(c, A.X(0), A.Y(0), A.X(L), A.Y(0), U.GRID, 1, [4, 4]);
+      U.line(c, A.X(0), 20, A.X(0), 270, U.INK, 3); U.line(c, A.X(L), 20, A.X(L), 270, U.INK, 3);
+      U.text(c, "藍線：波函數 ψ　淺藍色塊：機率密度 |ψ|²", 52, 14, U.GRAY, 11);
+      // 右側能階圖
+      var top = 30, bot = 270;
+      U.text(c, "能階 (eV)", 500, 22, U.GRAY, 12, "center");
+      for (var k = 1; k <= 5; k++) {
+        var Ek = E1c * k * k / (L * L), yy = bot - (bot - top) * Math.min(Ek / (E1c * 25 / (L * L)), 1);
+        U.line(c, 450, yy, 550, yy, k === n ? U.RED : U.GRID, k === n ? 3 : 1.5);
+        U.text(c, "n=" + k + "　" + Ek.toFixed(2), 556, yy + 4, k === n ? U.RED : U.GRAY, 11);
+      }
+      ui.read.textContent = "n = " + n + "，E = n²E1 = " + E.toFixed(2) + " eV（E1 = 0.376/L² = " + (E1c / (L * L)).toFixed(2) + " eV）。" +
+        (n > 1 ? "有 " + (n - 1) + " 個節點（機率為 0 的位置）。" : "基態沒有節點，機率集中在中央。") + "把井變窄，能階全部往上推開。";
+    }
+    ui.on.push(draw); draw();
+  };
 })();

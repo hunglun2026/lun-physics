@@ -19,6 +19,7 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import pages as P  # noqa: E402
+from helppage import P_help  # noqa: E402
 import render as R  # noqa: E402
 from content import _lib as L  # noqa: E402
 
@@ -86,8 +87,12 @@ def main() -> int:
     first = sorted((PUB / "fonts").glob("phys-sans-0-*.woff2"))
     P.PRELOAD = f'<link rel="preload" as="font" type="font/woff2" href="/fonts/{first[0].name}" crossorigin>' if first else ""
     rendered = collect(chs)
+    rng: dict[str, tuple[int, int]] = {}
+    for c in chs:
+        lo, hi = rng.get(c.unit, (c.no, c.no))
+        rng[c.unit] = (min(lo, c.no), max(hi, c.no))
     static = {
-        "about": P_about(), "help": P_help(), "privacy": P_privacy(),
+        "about": P_about(), "help": P_help(rng), "privacy": P_privacy(),
     }
     R.flush_math()
     ver = asset_version()
@@ -108,7 +113,7 @@ def main() -> int:
         page = P.chapter_page(c, uname[c.unit], R.finish(body), ph, prev, nxt, refs_html, ver)
         (PUB / "c" / f"{c.id}.html").write_text(page, encoding="utf-8", newline="\n")
 
-    (PUB / "index.html").write_text(P.home_page(L.UNITS, by_unit, len(chs), ver), encoding="utf-8", newline="\n")
+    (PUB / "home.html").write_text(P.home_page(L.UNITS, by_unit, len(chs), ver), encoding="utf-8", newline="\n")
     for name, (title, desc, inner) in static.items():
         (PUB / f"{name}.html").write_text(P.simple_page(title, desc, f"/{name}", R.finish(inner), ver), encoding="utf-8", newline="\n")
 
@@ -116,7 +121,7 @@ def main() -> int:
     index = [{"id": c.id, "no": c.no, "unit": c.unit, "title": c.title, "lead": c.lead, "n": len(c.problems)} for c in chs]
     (PUB / "data" / "chapters.json").write_text(json.dumps(index, ensure_ascii=False, separators=(",", ":")), encoding="utf-8", newline="\n")
 
-    urls = ["/", "/help", "/about", "/privacy"] + [f"/c/{c.id}" for c in chs]
+    urls = ["/", "/home", "/help", "/about", "/privacy"] + [f"/c/{c.id}" for c in chs]
     sm = "".join(f"<url><loc>{P.URL}{u}</loc></url>" for u in urls)  # 不放 lastmod：每天不同會讓 CI 的「public 與原始內容一致」檢查失敗
     (PUB / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n', encoding="utf-8", newline="\n")
     (PUB / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {P.URL}/sitemap.xml\n", encoding="utf-8", newline="\n")
@@ -152,28 +157,6 @@ def P_about():
 ## 製作
 
 鴻綸科技　hunglun.com"""))
-
-
-def P_help():
-    return ("怎麼用", "章節結構、練習題輸入方式、進度儲存方式。", R.body_to_html("""
-## 每一章的結構
-
-- 白話講解，先講直覺再講公式
-- 互動模擬：拖動滑桿，看數字怎麼影響結果
-- 練習題：輸入數值答案按「檢查」，系統容許約 2% 的誤差
-- 提示與解答：卡住先看提示，最後再看解答
-
-## 輸入答案
-
-直接輸入數字就好，不用寫單位，單位已經顯示在輸入框旁邊。很大或很小的數可以用科學記號，例如 `3.2e5` 代表 $3.2\\times10^5$。
-
-## 進度
-
-「標記這章讀完」和答對的題目，只存在你這台裝置的瀏覽器裡，不會上傳。換裝置或清除瀏覽器資料就會歸零。
-
-## 單位與常數
-
-全站重力加速度取 $g = 9.8\\ \\mathrm{m/s^2}$，其他常數用 CODATA 推薦值，並在題目裡寫明。"""))
 
 
 def P_privacy():

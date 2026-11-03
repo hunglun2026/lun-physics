@@ -14,6 +14,15 @@
   doneBtn.addEventListener("click", function () { st.done = !st.done; PHYS.set(id, st); paintDone(); });
   paintDone();
 
+  // 練習題進度：已答對幾題、進度條；全對時露出「下一章」按鈕
+  function paintProg() {
+    var k = Math.min(st.solved.length, n), c = document.getElementById("pcount"), b = document.getElementById("pbar"), cta = document.getElementById("cta");
+    if (c) c.textContent = "已答對 " + k + " / " + n + " 題";
+    if (b) b.style.width = (n ? Math.round(k / n * 100) : 0) + "%";
+    if (cta) cta.hidden = !(n && k >= n);
+  }
+  paintProg();
+
   // 輸入容錯：全形數字與負號、逗號、× 10^ 寫法
   function parse(s) {
     s = s.trim().replace(/[０-９]/g, function (c) { return String.fromCharCode(c.charCodeAt(0) - 0xFEE0); })
@@ -39,7 +48,7 @@
         res.textContent = "答對了"; res.className = "res ok"; mark();
         if (st.solved.indexOf(i) < 0) st.solved.push(i);
         if (st.solved.length >= n) st.done = true;
-        PHYS.set(id, st); paintDone();
+        PHYS.set(id, st); paintDone(); paintProg();
       } else {
         res.textContent = close(v, ans, 0.15) ? "很接近了，檢查一下計算或有效位數" : "再算算看，卡住可以先看提示";
         res.className = "res bad";

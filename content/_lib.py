@@ -50,9 +50,20 @@ def T(x, n: int = 3) -> str:
 
 def fill(text: str, **v) -> str:
     """把文字裡的 «名稱» 或 «名稱:位數» 換成算好的數字（LaTeX 片段，要放在 $...$ 裡）。"""
+    def in_math(pos: int) -> bool:
+        inline = display = False
+        for t in re.finditer(r"\$\$|\$", text[:pos]):
+            if t.group() == "$$":
+                display = not display
+            else:
+                inline = not inline
+        return inline or display
+
     def sub(m):
         name, _, n = m.group(1).partition(":")
-        return sig(v[name], int(n) if n else 3)
+        s = sig(v[name], int(n) if n else 3)
+        # 科學記號是 LaTeX 片段；寫在公式外面（純文字句子裡）時要自己包 $...$，否則畫面會露出原始碼
+        return f"${s}$" if "\\" in s and not in_math(m.start()) else s
     return re.sub(r"«([^»]+)»", sub, text)
 
 
@@ -93,9 +104,9 @@ UNITS = [
     ("mechanics", "力學", "運動、力、能量、動量、轉動、重力、流體"),
     ("waves", "振動與波", "簡諧運動、波、聲音"),
     ("thermo", "熱學", "溫度、熱力學定律、氣體、熵"),
-    ("em", "電磁學", "電場、電位、電路、磁場、感應、電磁波"),
+    ("em", "電磁學", "電場、電位、電路、磁場、感應、馬克士威方程組、電磁波"),
     ("optics", "光學", "幾何光學、干涉、繞射"),
-    ("modern", "近代物理", "相對論、量子、原子、原子核"),
+    ("modern", "近代物理", "相對論、量子、原子、固體、原子核、粒子與宇宙"),
 ]
 
 REGISTRY: list[Chapter] = []
